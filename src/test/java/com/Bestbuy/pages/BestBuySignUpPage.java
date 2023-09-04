@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.Bestbuy.utils.Reports;
 import com.Bestbuy.utils.SelWrappers;
 
 public class BestBuySignUpPage extends SelWrappers {
@@ -65,8 +66,12 @@ public class BestBuySignUpPage extends SelWrappers {
 		typeText(pwd,cpwd);
 		typeText(repwd,rcpwd);
 		typeText(phnum,pNum);
-		click(clickcreateacc);
-		
+		if(click(clickcreateacc))
+			Reports.reportStep("PASS","Account Created Successfully, if already exist please signin");
+		else 
+			
+			Reports.reportStep("FAIL","Problem in account creation");
+	
 		Thread.sleep(2000);
 		navigateBack();
 		
@@ -74,7 +79,13 @@ public class BestBuySignUpPage extends SelWrappers {
 		typeText(signInmailid,mailSi);
 		click(togglebutton);
 		typeText(signInPwd,pwdsi);
-		click(signIn);
+		if(click(signIn))
+			Reports.reportStep("PASS","Signin Successfully");
+		else 
+			
+			Reports.reportStep("FAIL","Problem in Sign in");
+
+		//click(signIn);
 		
 		
 		

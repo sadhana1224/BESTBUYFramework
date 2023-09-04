@@ -1,5 +1,6 @@
 package com.Bestbuy.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.Bestbuy.utils.BestWrappers;
@@ -9,7 +10,7 @@ import com.Bestbuy.utils.SelWrappers;
 public class BestBuyBottomPageTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
-	@Test
+	@Test( groups = {"Positive"})
 	public void bottomLinkValidation()
 	{
 		try
@@ -19,7 +20,7 @@ public class BestBuyBottomPageTest extends SelWrappers {
 			bw.brokenLinkBestbuy();
 			se.chooseCountry();
 		    bw.bestBuyHomepageBottomLink();
-			Reports.reportStep("PASS", "Home Page Bottom Links Validated");
+		Reports.reportStep("PASS", "Home Page Bottom Links Validated");
 
 			screenshot("BottomLink_valid");
 		}
@@ -28,5 +29,11 @@ public class BestBuyBottomPageTest extends SelWrappers {
 			Reports.reportStep("FAIL", "Home Page Bottom Links not Validated");
 			ex.printStackTrace();
 		}	
+	}
+	@AfterMethod
+	public void closeBrowser()
+	{
+		
+		closeAllBrowsers();
 	}
 }

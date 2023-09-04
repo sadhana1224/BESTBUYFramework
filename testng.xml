@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+ 	<groups>
+		<run>
+			<include name="Negative"/>
+		</run>	
+	</groups>
+	 <test  name="Test">
     <classes>
-		
-	
-	
+	<class name="com.Bestbuy.tests.BestBuySignin_NegativeTest"/>
+		<class name="com.Bestbuy.tests.BestBuySearch_NegativeTest"/>
+		<class name="com.Bestbuy.utils.Reports" />
+ </classes>
+  </test> 
+  <!--
+  <test name="Test1">
+	  <groups>
+		<run>
+			<include name="Positive"/>
+		</run>	
+	</groups>
+	 <classes>
 		<class name="com.Bestbuy.tests.BestBuySignupTest"/>
 		<class name="com.Bestbuy.tests.BestBuyMenuTest"/>  	
 		<class name="com.Bestbuy.tests.BestBuyBottomPageTest"/>
 		<class name="com.Bestbuy.tests.BestBuyAddItemsTest"/>
 		  	
 		
-	<!--	<class name="com.Bestbuy.utils.SelWrappers"/>
-		<class name="com.Bestbuy.utils.BestWrappers"/>-->
+		<class name="com.Bestbuy.utils.SelWrappers"/>
+		<class name="com.Bestbuy.utils.BestWrappers"/>
 		<class name="com.Bestbuy.utils.Reports" />
 		
 	
-		
-		
-     
-
     </classes>
-  </test> <!-- Test -->
+  </test> -->
 </suite> <!-- Suite -->

@@ -1,5 +1,6 @@
 package com.Bestbuy.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.Bestbuy.utils.BestWrappers;
@@ -12,13 +13,14 @@ public class BestbuyOpenBrowserTest extends SelWrappers{
 	
 
 	//First testcase
-	@Test
+	@Test( groups = {"Positive"})
 	public void browserLaunch()
 	{
 		try
 		{
 			Reports.setTCDesc("Valid launchbrowser functionality");
 			launchBrowser("https://www.bestbuy.com/");
+			Thread.sleep(2000);
 		
 		}
 		catch(Exception ex)
@@ -28,7 +30,11 @@ public class BestbuyOpenBrowserTest extends SelWrappers{
 		}
 	}
 
-
+	@AfterMethod
+	public void clossBrowser()
+	{
+		closeAllBrowsers();
+	}
 		
 	}
 

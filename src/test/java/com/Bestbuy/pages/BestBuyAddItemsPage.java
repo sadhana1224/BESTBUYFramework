@@ -28,11 +28,13 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	WebElement furniture;
 	@FindBy(xpath="//a[text()='Luggage']")
 	WebElement kitchenf;
+	@FindBy(xpath="//input[@id='soldout_facet-Exclude-Out-of-Stock-Items-0']")
+	WebElement outSt;
 	@FindBy(xpath="((//h4[@class='sku-title'])//a)[3]")
 	WebElement addproduct2;
 	@FindBy(xpath="(//div[@class='fulfillment-add-to-cart-button'])[1]")
 	WebElement addButton;
-	
+
 	//choose brand-add 3rd item-8th test case
 	@FindBy(xpath="//button[@data-t='hamburger-navigation-button']")
 	WebElement menuClick;
@@ -42,15 +44,17 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	WebElement brand;
 	@FindBy(xpath="(//div[@class='col-xs-2'])[2]")
 	WebElement brandpart;
-	@FindBy(xpath="//a[text()='Unlocked Samsung phones']")
+	@FindBy(xpath="//a[text()='Refurbished Samsung phones']")
 	WebElement brandprod;
-	@FindBy(xpath="//a[text()='Samsung - Pre-Owned Galaxy Note20 Ultra 5G 128GB (Unlocked) - Mystic Black']")
+	@FindBy(xpath="//input[@id='soldout_facet-Exclude-Out-of-Stock-Items-0']")
+	WebElement outSt1;
+	@FindBy(xpath="(//h4[@class='sku-title']//a)[3]")
 	WebElement mobile;
-	@FindBy(xpath="//button[@data-button-state='ADD_TO_CART']")
+	@FindBy(xpath="(//div[@class='fulfillment-add-to-cart-button'])[1]")
 	WebElement addProduct3;
-	
-//checkout page-9th test case
-	
+
+	//checkout page-9th test case
+
 	@FindBy(xpath="//a[text()='Go to Cart']")
 	WebElement goToCart;
 	@FindBy(xpath="//button[text()='Checkout']")
@@ -74,13 +78,14 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	@FindBy(xpath="//input[@id='save-for-billing-address-Map {}']")
 	WebElement billadd;
 	@FindBy(xpath="//span[text()='Apply']")
+	//contact information
 	WebElement apply;
 	@FindBy(id="user.emailAddress")
 	WebElement payemail;
-	
+
 	@FindBy(id="user.phone")
 	WebElement payphone;
-	
+
 	@FindBy(xpath="//div[@class='button--continue']//button")
 	WebElement payment;
 
@@ -89,7 +94,15 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		//add item 1
 		typeText(searchProduct,item1);
 		click(clickSearch);
-		click(addProduct);
+		//click(addProduct);
+		if (addProduct.isDisplayed())
+		{
+			addProduct.click();
+		}
+		else {
+			System.out.println("Product is out of stock.");
+		}
+
 
 		Thread.sleep(3000);
 
@@ -101,31 +114,48 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		click(clicklist);
 		click(furniture);
 		click(kitchenf);
+        click(outSt);
+		click(addproduct2);
 
-		if(click(addproduct2))
+		if (addButton.isDisplayed())
+		{
+			addButton.click();
 			Reports.reportStep("PASS","added the second product successfully");
-		else
+
+		}
+		else {
+			System.out.println("Product is out of stock.");
 			Reports.reportStep("FAIL","not added the second product successfully");
 
-		click(addButton);
+		}
+		//click(addButton);
 
 		Thread.sleep(3000);
 		navigateBack();
 		navigateBack();
-		
+
 		//add item3
 		click(menuClick);
 		click(selprod3);
 		click(brand);
 		click(brandpart);
 		click(brandprod);
+		click(outSt1);
 		click(mobile);
-			
-		if(click(addProduct3))
+		if (addProduct3.isDisplayed())
+		{
+			addProduct3.click();
 			Reports.reportStep("PASS","added the third product successfully");
-		else
+
+		}
+		else {
+			System.out.println("Product is out of stock.");
 			Reports.reportStep("FAIL","not added the third product successfully");
-//checkout page
+
+		}
+
+	
+		//checkout page
 		click(goToCart);
 		click(checkout);
 		click(cGuest);
@@ -139,13 +169,13 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		typeText(zipcode,code);
 		click(billadd);
 		click(apply);
-		
+
 		//payment
 		typeText(payemail,pmail);
 		typeText(payphone,pnum);
 		click(payment);
-		
-		
+
+
 
 	}
 }

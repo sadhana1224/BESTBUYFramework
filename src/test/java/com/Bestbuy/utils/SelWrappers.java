@@ -36,7 +36,7 @@ public class SelWrappers {
 			opt.addArguments("--disable-notifications");
 			driver=new ChromeDriver(opt);
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get(url);
 			Reports.reportStep("PASS", "The chrome browser launched successfully with the given url ("+url+")");
 
@@ -82,20 +82,20 @@ public class SelWrappers {
 		}
 	}
 	//sendkeys	
-	public void typeText(WebElement ele, String text)
+	public void typeText(WebElement ele, String input)
 	{
 		try
 		{
 			waitForMe(ele,20);
 			ele.clear();
-			ele.sendKeys(text);
-			Reports.reportStep("PASS", "Entered the given text ("+text+") successfully ");
+			ele.sendKeys(input);
+			Reports.reportStep("PASS", "Entered the given text ("+input+") successfully ");
 
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in sendkeys method");
-			Reports.reportStep("FAIL", "Problem while entering the given text ("+text+")");
+			Reports.reportStep("FAIL", "Problem while entering the given text ("+input+")");
 
 			ex.printStackTrace();
 		}

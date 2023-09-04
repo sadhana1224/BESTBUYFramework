@@ -10,7 +10,7 @@ import com.Bestbuy.utils.SelWrappers;
 public class BestBuyAddItemsTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
-	@Test
+	@Test( groups = {"Positive"})
 	public void add_Items_toCart()
 	{
 		try
@@ -20,7 +20,7 @@ public class BestBuyAddItemsTest extends SelWrappers {
 			bw.brokenLinkBestbuy();
 			se.chooseCountry();
 			bw.bestBuyAddItemsToCart("macbook air 13.6 laptop","sadhana","sadhu","1510 Wyoming Blvd NE","Albuquerque","87112","sadhanasuba24@test.com","9688741481");
-			Reports.reportStep("PASS", "item added in the cart");
+			//Reports.reportStep("PASS", "item added in the cart");
 
 			screenshot("additem1_valid");
 		}
