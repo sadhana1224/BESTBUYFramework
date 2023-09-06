@@ -48,7 +48,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	WebElement brandprod;
 	@FindBy(xpath="//input[@id='soldout_facet-Exclude-Out-of-Stock-Items-0']")
 	WebElement outSt1;
-	@FindBy(xpath="(//h4[@class='sku-title']//a)[3]")
+	@FindBy(xpath="(//h4[@class='sku-title']//a)[5]")
 	WebElement mobile;
 	@FindBy(xpath="(//div[@class='fulfillment-add-to-cart-button'])[1]")
 	WebElement addProduct3;
@@ -57,6 +57,10 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 
 	@FindBy(xpath="//a[text()='Go to Cart']")
 	WebElement goToCart;
+	
+	@FindBy(xpath="//button[@class='c-close-icon c-modal-close-icon']")
+	WebElement closeAd;
+	
 	@FindBy(xpath="//button[text()='Checkout']")
 	WebElement checkout;
 	@FindBy(xpath="//button[contains(text(),'Continue as Guest')]")
@@ -88,7 +92,25 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 
 	@FindBy(xpath="//div[@class='button--continue']//button")
 	WebElement payment;
-
+	
+	//dummy payment
+	@FindBy(xpath="//input[@id='number']")
+	WebElement cardno;
+	
+	@FindBy(xpath="//select[@id='expMonth']//option[4]")
+	WebElement expiremonth;
+	
+	@FindBy(xpath="//select[@id='expYear']//option[6]")
+	WebElement expireyear;
+	@FindBy(xpath="//input[@id='cvv']")
+	WebElement cvv;
+	//ask password
+	@FindBy(xpath="//input[@name='password']")
+	WebElement pass;
+	
+	//place your order
+	@FindBy(xpath="//span[contains(text(),'Place Your Order')]")
+	WebElement placeorder;
 	public void searchAndAddItems(String item1,String name,String lname,String street,String city,String code,String pmail,String pnum) throws InterruptedException
 	{
 		//add item 1
@@ -102,10 +124,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		else {
 			System.out.println("Product is out of stock.");
 		}
-
-
 		Thread.sleep(3000);
-
 		navigateBack();
 
 		//add item 2
@@ -126,7 +145,6 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		else {
 			System.out.println("Product is out of stock.");
 			Reports.reportStep("FAIL","not added the second product successfully");
-
 		}
 		//click(addButton);
 
@@ -157,6 +175,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	
 		//checkout page
 		click(goToCart);
+		click(closeAd);
 		click(checkout);
 		click(cGuest);
 		click(shipping);
@@ -175,8 +194,16 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		typeText(payphone,pnum);
 		click(payment);
 
-
-
+	}
+	
+	public void dummyPayment(String cno,String cvvno,String pwdc)
+	{
+		typeText(cardno,cno);
+		click(expiremonth);
+		click(expireyear);
+		typeText(cvv,cvvno);
+		typeText(pass,pwdc);
+		click(placeorder);
 	}
 }
 

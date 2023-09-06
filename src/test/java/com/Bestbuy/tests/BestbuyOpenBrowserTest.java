@@ -19,7 +19,7 @@ public class BestbuyOpenBrowserTest extends SelWrappers{
 		try
 		{
 			Reports.setTCDesc("Valid launchbrowser functionality");
-			launchBrowser("https://www.bestbuy.com/");
+			launchBrowser();
 			Thread.sleep(2000);
 		
 		}

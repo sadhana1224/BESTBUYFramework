@@ -39,6 +39,11 @@ public class BestWrappers extends SelWrappers {
 		baPage.searchAndAddItems(item1,name,lname,city,street,code,email,num);
 
 	}
+	public void dummyPaymentAndPlaceOrder(String cno,String cvvno,String pwdc)
+	{
+		BestBuyAddItemsPage baPage1=PageFactory.initElements(driver, BestBuyAddItemsPage.class);
+		baPage1.dummyPayment(cno,cvvno,pwdc);
+	}
 	
 	//negative test cases
 	//1

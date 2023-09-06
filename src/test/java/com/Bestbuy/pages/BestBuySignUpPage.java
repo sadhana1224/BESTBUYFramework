@@ -35,6 +35,9 @@ public class BestBuySignUpPage extends SelWrappers {
 	WebElement clickcreateacc;
 	
 	//sign in page
+	@FindBy(xpath="//button[@id='account-menu-account-button']//*[name()='svg']")
+	WebElement accountbutton1;
+
 	@FindBy(xpath="//a[text()='Sign In']")
 	WebElement signInclick;
 	@FindBy(xpath="//input[@id='fld-e']")
@@ -75,6 +78,7 @@ public class BestBuySignUpPage extends SelWrappers {
 		Thread.sleep(2000);
 		navigateBack();
 		
+		click(accountbutton1);
 		click(signInclick);
 		typeText(signInmailid,mailSi);
 		click(togglebutton);

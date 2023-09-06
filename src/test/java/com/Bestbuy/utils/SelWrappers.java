@@ -14,11 +14,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import com.Bestbuy.utils.Reports;
 
@@ -26,25 +30,43 @@ public class SelWrappers {
 
 	public static WebDriver driver=null;
 
-	//Launch browser for the specified url
-	//parameter-> url
-	public void launchBrowser(String url)
+	static String browsername;
+
+	@BeforeClass
+	@Parameters("browser")
+	public void setUp(String browser)
+	{
+
+		this.browsername = browser;
+	}
+	public void launchBrowser()
 	{
 		try
 		{
-			ChromeOptions opt=new ChromeOptions();
-			opt.addArguments("--disable-notifications");
-			driver=new ChromeDriver(opt);
+			if(browsername.equalsIgnoreCase("chrome"))
+			{
+				ChromeOptions opt=new ChromeOptions();
+				opt.addArguments("--disable-notifications");
+				driver=new ChromeDriver(opt);
+			}
+			else
+			{
+				EdgeOptions opt=new EdgeOptions();
+				opt.addArguments("--disable-notifications");
+				driver=new EdgeDriver(opt);
+			}
+
+
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			driver.get(url);
-			Reports.reportStep("PASS", "The chrome browser launched successfully with the given url ("+url+")");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+			driver.get("https://www.bestbuy.com/");
+			Reports.reportStep("PASS", "The chrome browser launched successfully with the given url ("+browsername+")");
 
 		}
 		catch(Exception ex)
 		{
-			//System.out.println("Problem in launching the browser");
-			Reports.reportStep("FAIL", "Problem while launching the chrome browser with the given url ("+url+")");
+			System.out.println("Problem in launching the browser");
+			Reports.reportStep("FAIL", "Problem while launching the chrome browser with the given url ("+browsername+")");
 			ex.printStackTrace();
 		}
 	}

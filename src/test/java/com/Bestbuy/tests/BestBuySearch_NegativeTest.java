@@ -10,14 +10,14 @@ public class BestBuySearch_NegativeTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
 	
-	@Test( groups = {"Negative"})
+	@Test
 	
 	public void signIn_invalidCredentials()
 	{
 		try
 		{
 		Reports.setTCDesc("Search with  invalid Credentials");
-		bw.launchBrowser("https://www.bestbuy.com/");
+		bw.launchBrowser();
 		bw.brokenLinkBestbuy();
 		se.chooseCountry();
 		bw.negativeTc_Search("fhgjhdfjgdf");

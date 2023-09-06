@@ -11,14 +11,14 @@ public class BestBuySignin_NegativeTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
 	
-	@Test( groups = {"Negative"})
+	@Test
 	
 	public void signIn_invalidCredentials() throws InterruptedException
 	{
 		try
 		{
 		Reports.setTCDesc("Sign in with invalid Credentials");
-		bw.launchBrowser("https://www.bestbuy.com/");
+		bw.launchBrowser();
 		bw.brokenLinkBestbuy();
 		se.chooseCountry();
 		bw.negativeTc_signIn("sadhuuuuu1223@gmaill.com","Bestbuy@123");

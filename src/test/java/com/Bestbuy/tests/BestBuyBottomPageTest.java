@@ -16,7 +16,7 @@ public class BestBuyBottomPageTest extends SelWrappers {
 		try
 		{
 			Reports.setTCDesc("Validating the Home Page Bottom Links");
-			bw.launchBrowser("https://www.bestbuy.com/");
+			bw.launchBrowser();
 			bw.brokenLinkBestbuy();
 			se.chooseCountry();
 		    bw.bestBuyHomepageBottomLink();
