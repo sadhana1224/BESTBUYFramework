@@ -1,55 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-06T19:32:00 IST" name="Suite" finished-at="2023-09-06T19:39:50 IST" duration-ms="470054">
+  <suite started-at="2023-09-06T21:10:27 IST" name="Suite" finished-at="2023-09-06T21:14:33 IST" duration-ms="246137">
     <groups>
-      <group name="Positive">
-        <method signature="BestBuyAddItemsTest.add_Items_toCart()[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7a35b0f5]" name="add_Items_toCart" class="com.Bestbuy.tests.BestBuyAddItemsTest"/>
-        <method signature="BestBuyMenuTest.menuNavigation()[pri:0, instance:com.Bestbuy.tests.BestBuyMenuTest@48075da3]" name="menuNavigation" class="com.Bestbuy.tests.BestBuyMenuTest"/>
-      </group> <!-- Positive -->
     </groups>
-    <test started-at="2023-09-06T19:32:00 IST" name="Test" finished-at="2023-09-06T19:39:50 IST" duration-ms="470054">
-      <class name="com.Bestbuy.tests.BestBuySignupTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuySignupTest@3f191845]" started-at="2023-09-06T19:32:00 IST" name="setUp" finished-at="2023-09-06T19:32:00 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="signUpPage()[pri:0, instance:com.Bestbuy.tests.BestBuySignupTest@3f191845]" started-at="2023-09-06T19:32:00 IST" name="signUpPage" finished-at="2023-09-06T19:32:49 IST" duration-ms="49166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpPage -->
-        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.Bestbuy.tests.BestBuySignupTest@3f191845]" started-at="2023-09-06T19:32:49 IST" name="closeBrowsers" finished-at="2023-09-06T19:32:50 IST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowsers -->
-      </class> <!-- com.Bestbuy.tests.BestBuySignupTest -->
+    <test started-at="2023-09-06T21:10:27 IST" name="Test" finished-at="2023-09-06T21:14:33 IST" duration-ms="246137">
       <class name="com.Bestbuy.tests.BestBuySignin_NegativeTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuySignin_NegativeTest@5e2c3d18]" started-at="2023-09-06T19:38:14 IST" name="setUp" finished-at="2023-09-06T19:38:14 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="signIn_invalidCredentials()[pri:0, instance:com.Bestbuy.tests.BestBuySignin_NegativeTest@5e2c3d18]" started-at="2023-09-06T19:38:14 IST" name="signIn_invalidCredentials" finished-at="2023-09-06T19:39:07 IST" duration-ms="53397" status="PASS">
+        <test-method signature="signIn_invalidCredentials()[pri:0, instance:com.Bestbuy.tests.BestBuySignin_NegativeTest@72cc7e6f]" started-at="2023-09-06T21:13:00 IST" name="signIn_invalidCredentials" finished-at="2023-09-06T21:13:52 IST" duration-ms="51606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn_invalidCredentials -->
-      </class> <!-- com.Bestbuy.tests.BestBuySignin_NegativeTest -->
-      <class name="com.Bestbuy.tests.BestBuyAddItemsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7a35b0f5]" started-at="2023-09-06T19:35:28 IST" name="setUp" finished-at="2023-09-06T19:35:28 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuySignin_NegativeTest@72cc7e6f]" started-at="2023-09-06T21:13:00 IST" name="setUp" finished-at="2023-09-06T21:13:00 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,38 +22,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="add_Items_toCart()[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7a35b0f5]" started-at="2023-09-06T19:35:28 IST" name="add_Items_toCart" finished-at="2023-09-06T19:38:13 IST" duration-ms="165164" status="PASS">
+      </class> <!-- com.Bestbuy.tests.BestBuySignin_NegativeTest -->
+      <class name="com.Bestbuy.tests.BestBuyAddItemsTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7f485fda]" started-at="2023-09-06T21:10:27 IST" name="setUp" finished-at="2023-09-06T21:10:27 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="add_Items_toCart()[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7f485fda]" started-at="2023-09-06T21:10:27 IST" name="add_Items_toCart" finished-at="2023-09-06T21:13:00 IST" duration-ms="153019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_Items_toCart -->
-        <test-method is-config="true" signature="clossBrowser()[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7a35b0f5]" started-at="2023-09-06T19:38:13 IST" name="clossBrowser" finished-at="2023-09-06T19:38:14 IST" duration-ms="621" status="PASS">
+        <test-method is-config="true" signature="clossBrowser()[pri:0, instance:com.Bestbuy.tests.BestBuyAddItemsTest@7f485fda]" started-at="2023-09-06T21:13:00 IST" name="clossBrowser" finished-at="2023-09-06T21:13:00 IST" duration-ms="727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clossBrowser -->
       </class> <!-- com.Bestbuy.tests.BestBuyAddItemsTest -->
-      <class name="com.Bestbuy.tests.BestBuyMenuTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuyMenuTest@48075da3]" started-at="2023-09-06T19:32:50 IST" name="setUp" finished-at="2023-09-06T19:32:50 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="menuNavigation()[pri:0, instance:com.Bestbuy.tests.BestBuyMenuTest@48075da3]" started-at="2023-09-06T19:32:50 IST" name="menuNavigation" finished-at="2023-09-06T19:33:32 IST" duration-ms="41697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- menuNavigation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.Bestbuy.tests.BestBuyMenuTest@48075da3]" started-at="2023-09-06T19:33:32 IST" name="closeBrowser" finished-at="2023-09-06T19:33:32 IST" duration-ms="383" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.Bestbuy.tests.BestBuyMenuTest -->
       <class name="com.Bestbuy.tests.BestBuySearch_NegativeTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuySearch_NegativeTest@2cb4893b]" started-at="2023-09-06T19:39:07 IST" name="setUp" finished-at="2023-09-06T19:39:07 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuySearch_NegativeTest@5afa3c9]" started-at="2023-09-06T21:13:52 IST" name="setUp" finished-at="2023-09-06T21:13:52 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -102,42 +56,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="signIn_invalidCredentials()[pri:0, instance:com.Bestbuy.tests.BestBuySearch_NegativeTest@2cb4893b]" started-at="2023-09-06T19:39:07 IST" name="signIn_invalidCredentials" finished-at="2023-09-06T19:39:50 IST" duration-ms="43233" status="PASS">
+        <test-method signature="signIn_invalidCredentials()[pri:0, instance:com.Bestbuy.tests.BestBuySearch_NegativeTest@5afa3c9]" started-at="2023-09-06T21:13:52 IST" name="signIn_invalidCredentials" finished-at="2023-09-06T21:14:33 IST" duration-ms="40730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn_invalidCredentials -->
       </class> <!-- com.Bestbuy.tests.BestBuySearch_NegativeTest -->
       <class name="com.Bestbuy.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.Bestbuy.utils.Reports@16eb3ea3]" started-at="2023-09-06T19:32:00 IST" name="startReport" finished-at="2023-09-06T19:32:00 IST" duration-ms="531" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.Bestbuy.utils.Reports@48075da3]" started-at="2023-09-06T21:10:26 IST" name="startReport" finished-at="2023-09-06T21:10:27 IST" duration-ms="535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.Bestbuy.utils.Reports@16eb3ea3]" started-at="2023-09-06T19:39:50 IST" name="endReport" finished-at="2023-09-06T19:39:51 IST" duration-ms="608" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.Bestbuy.utils.Reports@48075da3]" started-at="2023-09-06T21:14:33 IST" name="endReport" finished-at="2023-09-06T21:14:33 IST" duration-ms="597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.Bestbuy.utils.Reports -->
-      <class name="com.Bestbuy.tests.BestBuyBottomPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Bestbuy.tests.BestBuyBottomPageTest@68c9133c]" started-at="2023-09-06T19:33:32 IST" name="setUp" finished-at="2023-09-06T19:33:32 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="bottomLinkValidation()[pri:0, instance:com.Bestbuy.tests.BestBuyBottomPageTest@68c9133c]" started-at="2023-09-06T19:33:32 IST" name="bottomLinkValidation" finished-at="2023-09-06T19:35:27 IST" duration-ms="115430" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bottomLinkValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.Bestbuy.tests.BestBuyBottomPageTest@68c9133c]" started-at="2023-09-06T19:35:27 IST" name="closeBrowser" finished-at="2023-09-06T19:35:28 IST" duration-ms="434" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.Bestbuy.tests.BestBuyBottomPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

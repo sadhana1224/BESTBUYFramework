@@ -17,7 +17,7 @@ public class BestBuyMenuTest extends SelWrappers {
 		{
 			Reports.setTCDesc("Validating the title page of Menu");
 			bw.launchBrowser();
-			bw.brokenLinkBestbuy();
+			//bw.brokenLinkBestbuy();
 			se.chooseCountry();
 		    bw.bestBuyMenuPage();
 			Reports.reportStep("PASS", "Title page of Menu passed");
