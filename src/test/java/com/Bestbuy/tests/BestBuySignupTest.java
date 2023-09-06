@@ -11,13 +11,14 @@ public class BestBuySignupTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
 	
-	@Test( groups = {"Positive"})
+	@Test
 	public void signUpPage()
 	{
 		try
 		{
-			Reports.setTCDesc("Validating SignUp functionality with valid credentials");
+			Reports.setTCDesc("Validating the Browser Launch");
 			bw.launchBrowser();
+			Reports.setTCDesc("Validating SignUp functionality with valid credentials");
 			bw.brokenLinkBestbuy();
 			bw.bestSignUp("sadhu","logesh","sadhanasuba24@test.com","One+two=3","One+two=3","8532498732","sadhanasuba24@test.com","One+two=3");
 			screenshot("signup_valid");

@@ -12,7 +12,7 @@ public class BestBuyBrokenlinkTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
 	
-	@Test( groups = {"Positive"})
+	@Test
 	public void brokenLinktest()
 	{
 		try

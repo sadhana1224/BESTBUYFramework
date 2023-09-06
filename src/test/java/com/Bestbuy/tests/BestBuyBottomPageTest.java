@@ -10,7 +10,7 @@ import com.Bestbuy.utils.SelWrappers;
 public class BestBuyBottomPageTest extends SelWrappers {
 	SelWrappers se=new SelWrappers();
 	BestWrappers bw=new BestWrappers();
-	@Test( groups = {"Positive"})
+	@Test
 	public void bottomLinkValidation()
 	{
 		try
