@@ -4,14 +4,14 @@
 	 <test  name="Test">
 		 <parameter name="browser" value="chrome"/>
     <classes>
-		<class name="com.Bestbuy.tests.BestBuySignupTest"/>
+	<class name="com.Bestbuy.tests.BestBuySignupTest"/>	
 		<class name="com.Bestbuy.tests.BestBuyBottomPageTest"/> 
-		<class name="com.Bestbuy.tests.BestBuyMenuTest"/>  
+		<class name="com.Bestbuy.tests.BestBuyMenuTest"/> 
 			
 		<class name="com.Bestbuy.tests.BestBuyAddItemsTest"/>
 		
-	<!--<class name="com.Bestbuy.tests.BestBuySignin_NegativeTest"/>
-		<class name="com.Bestbuy.tests.BestBuySearch_NegativeTest"/>-->
+	<class name="com.Bestbuy.tests.BestBuySignin_NegativeTest"/>
+		<class name="com.Bestbuy.tests.BestBuySearch_NegativeTest"/>
 		<class name="com.Bestbuy.utils.Reports" />
  </classes>
   </test> 

@@ -47,6 +47,9 @@ public class SelWrappers {
 			{
 				ChromeOptions opt=new ChromeOptions();
 				opt.addArguments("--disable-notifications");
+				opt.addArguments("--remote-allow-origins=*");
+
+				
 				driver=new ChromeDriver(opt);
 			}
 			else
@@ -840,16 +843,19 @@ public class SelWrappers {
 
 	            if (responseCode != HttpURLConnection.HTTP_OK) {
 	                System.out.println("The URL '" + urlToCheck + "' is broken.");
+					Reports.reportStep("FAIL", "Successfully validate the given URL link is broken or not");
+
 	            } else {
 	                System.out.println("The URL '" + urlToCheck + "' is not broken.");
+					Reports.reportStep("PASS", "Successfully validate the given URL link is broken or not");
+
 	            }
-				Reports.reportStep("PASS", "Successfully validate the given URL link is broken or not");
  
 	        } 
 	        catch (IOException e) {
 				Reports.reportStep("FAIL", "Problem while validating the given URL");
 
-	            System.out.println("An exception occurred, indicating a broken link.");
+	            System.out.println(e);
 	        }
 	}
 }

@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.Bestbuy.tests.BestBuyMenuTest">
+      <class name="com.Bestbuy.tests.BestBuyAddItemsTest">
         <methods>
-          <include name="menuNavigation"/>
-          <include name="closeBrowser"/>
+          <include name="clossBrowser"/>
+          <include name="add_Items_toCart"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.Bestbuy.tests.BestBuyMenuTest -->
+      </class> <!-- com.Bestbuy.tests.BestBuyAddItemsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

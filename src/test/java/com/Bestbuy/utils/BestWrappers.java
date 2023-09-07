@@ -32,11 +32,11 @@ public class BestWrappers extends SelWrappers {
 		BestBuyBottomLinkPage bmlPage=PageFactory.initElements(driver, BestBuyBottomLinkPage.class);
 		bmlPage.bottomLinks();
 	}
-	public void bestBuyAddItemsToCart(String item1,String name,String lname,String city,String street,String code,String email,String num) throws InterruptedException
+	public void bestBuyAddItemsToCart(String item1,String codeh,String name,String lname,String city,String street,String code,String email,String num) throws InterruptedException
 	{
 		
 		BestBuyAddItemsPage baPage=PageFactory.initElements(driver, BestBuyAddItemsPage.class);
-		baPage.searchAndAddItems(item1,name,lname,city,street,code,email,num);
+		baPage.searchAndAddItems(item1,codeh,name,lname,city,street,code,email,num);
 
 	}
 	public void dummyPaymentAndPlaceOrder(String cno,String cvvno,String pwdc)

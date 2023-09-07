@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.Bestbuy.utils.Reports;
 import com.Bestbuy.utils.SelWrappers;
 
 public class BestBuyBottomLinkPage extends SelWrappers {
@@ -30,12 +31,14 @@ public class BestBuyBottomLinkPage extends SelWrappers {
 		            int responseCode=connection.getResponseCode();
 
 		            if (responseCode != HttpURLConnection.HTTP_OK) {
-		                System.out.println("The URL '" + url + "' is novalidated.");
+		                System.out.println("The URL '" + url + "' is not validated.");
+
 		            } else {
 		                System.out.println("The URL '" + url + "' is validated.");
+
 		            }
 		        } catch (IOException e) {
-		            System.out.println("An exception occurred, indicating a broken link.");
+		            System.out.println(e);
 		        }
 			
 		}

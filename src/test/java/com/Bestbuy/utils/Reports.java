@@ -74,6 +74,7 @@ public static void reportStep(String status,String desc)
 		else if(status.equalsIgnoreCase("FAIL"))
 		{
 			extentTest.log(Status.FAIL, desc);
+			 assert false;
 		}
 		else if (status.equalsIgnoreCase("SKIP"))
 		{

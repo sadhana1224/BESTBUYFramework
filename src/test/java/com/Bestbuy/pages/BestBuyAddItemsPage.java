@@ -46,11 +46,14 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	WebElement brandpart;
 	@FindBy(xpath="//a[text()='Refurbished Samsung phones']")
 	WebElement brandprod;
+	//@FindBy(xpath="//input[@id='store-pickup-pickuptoday']")
+	//WebElement store;
 	@FindBy(xpath="//input[@id='soldout_facet-Exclude-Out-of-Stock-Items-0']")
 	WebElement outSt1;
-	@FindBy(xpath="(//h4[@class='sku-title']//a)[5]")
-	WebElement mobile;
-	@FindBy(xpath="(//div[@class='fulfillment-add-to-cart-button'])[1]")
+//	@FindBy(xpath="(//h4[@class='sku-title']//a)[7]")
+//	WebElement mobile;
+	
+	@FindBy(xpath="(//button[text()='Add to Cart'])[2]")
 	WebElement addProduct3;
 
 	//checkout page-9th test case
@@ -60,6 +63,13 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	
 	@FindBy(xpath="//button[@class='c-close-icon c-modal-close-icon']")
 	WebElement closeAd;
+	@FindBy(xpath="(//span[@class='availability__link'])[1]")
+	WebElement pinClick;
+	@FindBy(xpath="//input[@id='location']")
+	WebElement codehere;
+	@FindBy(xpath="//button[text()='Update']")
+	WebElement updateClick;
+	
 	
 	@FindBy(xpath="//button[text()='Checkout']")
 	WebElement checkout;
@@ -111,7 +121,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 	//place your order
 	@FindBy(xpath="//span[contains(text(),'Place Your Order')]")
 	WebElement placeorder;
-	public void searchAndAddItems(String item1,String name,String lname,String street,String city,String code,String pmail,String pnum) throws InterruptedException
+	public void searchAndAddItems(String item1,String codeh,String name,String lname,String street,String city,String code,String pmail,String pnum) throws InterruptedException
 	{
 		//add item 1
 		typeText(searchProduct,item1);
@@ -158,24 +168,30 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		click(brand);
 		click(brandpart);
 		click(brandprod);
-		click(outSt1);
-		click(mobile);
-		if (addProduct3.isDisplayed())
+		//click(store);
+	//	click(outSt1);
+		//click(addProduct3);
+		
+		if(click(addProduct3))
 		{
-			addProduct3.click();
-			Reports.reportStep("PASS","added the third product successfully");
-
+			Reports.reportStep("PASS","added the Third product successfully");
 		}
 		else {
 			System.out.println("Product is out of stock.");
-			Reports.reportStep("FAIL","not added the third product successfully");
-
+			Reports.reportStep("FAIL","not added the Third product successfully");
 		}
-
+			
 	
+
 		//checkout page
 		click(goToCart);
 		click(closeAd);
+		
+		click(pinClick);
+		typeText(codehere,codeh);
+		jsClick(updateClick);
+		Thread.sleep(6000);
+		
 		click(checkout);
 		click(cGuest);
 		click(shipping);
@@ -193,8 +209,10 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		typeText(payemail,pmail);
 		typeText(payphone,pnum);
 		click(payment);
+		Thread.sleep(3000);
+		}
 
-	}
+	
 	
 	public void dummyPayment(String cno,String cvvno,String pwdc)
 	{
