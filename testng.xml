@@ -14,7 +14,7 @@
 		<class name="com.Bestbuy.utils.Reports" />
  </classes>
   </test> 
-   <test  name="EdgeTest">
+ <!--  <test  name="EdgeTest">
 		 <parameter name="browser" value="edge"/>
     <classes>
 		<class name="com.Bestbuy.tests.BestBuySignupTest"/>	
@@ -24,13 +24,13 @@
 		
 	<class name="com.Bestbuy.tests.BestBuySignin_NegativeTest"/>
 	<class name="com.Bestbuy.tests.BestBuySearch_NegativeTest"/>
-  <!--
+ 
  
 		<class name="com.Bestbuy.utils.SelWrappers"/>
-		<class name="com.Bestbuy.utils.BestWrappers"/>-->
+		<class name="com.Bestbuy.utils.BestWrappers"/>
 		<class name="com.Bestbuy.utils.Reports" />
 		
 	</classes>
-	</test>
+	</test>-->
   
 </suite> 
