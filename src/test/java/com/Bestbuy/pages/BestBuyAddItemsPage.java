@@ -169,7 +169,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		click(brandpart);
 		click(brandprod);
 		//click(store);
-	//	click(outSt1);
+		jsClick(outSt1);
 		//click(addProduct3);
 		
 		if(click(addProduct3))
@@ -190,7 +190,7 @@ public class BestBuyAddItemsPage  extends SelWrappers {
 		click(pinClick);
 		typeText(codehere,codeh);
 		jsClick(updateClick);
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		
 		click(checkout);
 		click(cGuest);

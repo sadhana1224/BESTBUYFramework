@@ -9,15 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">400,892</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">177,910</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">EdgeTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">91,547</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">269,457</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Bestbuy.tests.BestBuyAddItemsTest</td><td><a href="#m0">add_Items_toCart</a></td><td rowspan="1">1694061147382</td><td rowspan="1">139207</td></tr><tr class="passedodd"><td rowspan="1">com.Bestbuy.tests.BestBuyBottomPageTest</td><td><a href="#m1">bottomLinkValidation</a></td><td rowspan="1">1694061005073</td><td rowspan="1">106472</td></tr><tr class="passedeven"><td rowspan="1">com.Bestbuy.tests.BestBuyMenuTest</td><td><a href="#m2">menuNavigation</a></td><td rowspan="1">1694061111982</td><td rowspan="1">34952</td></tr><tr class="passedodd"><td rowspan="1">com.Bestbuy.tests.BestBuySearch_NegativeTest</td><td><a href="#m3">signIn_invalidCredentials</a></td><td rowspan="1">1694061320864</td><td rowspan="1">32325</td></tr><tr class="passedeven"><td rowspan="1">com.Bestbuy.tests.BestBuySignin_NegativeTest</td><td><a href="#m4">signIn_invalidCredentials</a></td><td rowspan="1">1694061287284</td><td rowspan="1">33580</td></tr><tr class="passedodd"><td rowspan="1">com.Bestbuy.tests.BestBuySignupTest</td><td><a href="#m5">signUpPage</a></td><td rowspan="1">1694060952349</td><td rowspan="1">52307</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Bestbuy.tests.BestBuyAddItemsTest</td><td><a href="#m0">add_Items_toCart</a></td><td rowspan="1">1694072525171</td><td rowspan="1">177166</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">EdgeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Bestbuy.tests.BestBuyAddItemsTest</td><td><a href="#m1">add_Items_toCart</a></td><td rowspan="1">1694072703088</td><td rowspan="1">90882</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.Bestbuy.tests.BestBuyAddItemsTest#add_Items_toCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.Bestbuy.tests.BestBuyBottomPageTest#bottomLinkValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.Bestbuy.tests.BestBuyMenuTest#menuNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.Bestbuy.tests.BestBuySearch_NegativeTest#signIn_invalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.Bestbuy.tests.BestBuySignin_NegativeTest#signIn_invalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.Bestbuy.tests.BestBuySignupTest#signUpPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ChromeTest</h2><h3 id="m0">com.Bestbuy.tests.BestBuyAddItemsTest#add_Items_toCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>EdgeTest</h2><h3 id="m1">com.Bestbuy.tests.BestBuyAddItemsTest#add_Items_toCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError
+	at com.Bestbuy.utils.Reports.reportStep(Reports.java:77)
+	at com.Bestbuy.utils.SelWrappers.click(SelWrappers.java:143)
+	at com.Bestbuy.pages.BestBuyAddItemsPage.searchAndAddItems(BestBuyAddItemsPage.java:175)
+	at com.Bestbuy.utils.BestWrappers.bestBuyAddItemsToCart(BestWrappers.java:39)
+	at com.Bestbuy.tests.BestBuyAddItemsTest.add_Items_toCart(BestBuyAddItemsTest.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
